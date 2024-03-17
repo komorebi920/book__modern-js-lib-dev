@@ -1,5 +1,5 @@
 const nodeResolve = require("rollup-plugin-node-resolve");
-const { banner, plugins } = require("./rollup.js");
+const { banner, plugins } = require("./rollup");
 
 module.exports = {
   input: "src/index.js",

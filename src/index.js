@@ -1,4 +1,4 @@
-import { type } from "./type.js";
+import { type } from "./type";
 
 /**
  * 深拷贝
@@ -28,14 +28,5 @@ function clone(source) {
 
   return target;
 }
-
-// 测试
-let a = { c: 1 };
-let b = clone(a);
-
-a.c = 2;
-
-console.log(a.c); // 输出：2
-console.log(b.c); // 输出：1
 
 export { clone };
