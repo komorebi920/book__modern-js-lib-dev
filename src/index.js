@@ -37,3 +37,5 @@ a.c = 2;
 
 console.log(a.c); // 输出：2
 console.log(b.c); // 输出：1
+
+export { clone };
