@@ -1,24 +1,24 @@
-const babel = require("rollup-plugin-babel");
-const commonjs = require("rollup-plugin-commonjs");
-const { name, version } = require("../package.json");
+const babel = require('rollup-plugin-babel');
+const commonjs = require('rollup-plugin-commonjs');
+const { name, version } = require('../package.json');
 const banner = `/*
  * ${name} ${version}
  * Licensed under MIT
  */
 `;
 
-function getCompiler(opt) {
+function getCompiler() {
   return babel({
     babelrc: false,
     runtimeHelpers: true,
     presets: [
       [
-        "@babel/preset-env",
+        '@babel/preset-env',
         {
           targets: {
             browsers:
-              "last 2 versions, > 1%, ie >= 8, Chrome >= 45, safari >= 10",
-            node: "0.12",
+              'last 2 versions, > 1%, ie >= 8, Chrome >= 45, safari >= 10',
+            node: '0.12',
           },
           modules: false,
           loose: true,
@@ -27,13 +27,13 @@ function getCompiler(opt) {
     ],
     plugins: [
       [
-        "@babel/plugin-transform-runtime",
+        '@babel/plugin-transform-runtime',
         {
           corejs: 3,
         },
       ],
     ],
-    exclude: "node_modules/**",
+    exclude: 'node_modules/**',
   });
 }
 
