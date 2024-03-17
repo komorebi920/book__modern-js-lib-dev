@@ -12,8 +12,8 @@
 举个例子（要包含的代码用例）
 
 ```js
-const data = { a: { b: 1 } }
-const cloneData = clone(data)
+const data = { a: { b: 1 } };
+const cloneData = clone(data);
 ```
 
 特殊说明，如特殊情况下会报错等

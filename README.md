@@ -12,7 +12,9 @@
 
   ![alt text](./doc/chapter-3/error.png)
 
-- [ ] 第 4 章 开源
+- [x] 第 4 章 开源
+
+- [x] 第 5 章 维护
 
 ## clone
 
@@ -29,14 +31,14 @@ $ npm install clone
 如果使用 `node.js` 环境
 
 ```js
-const { clone } = require("clone");
+const { clone } = require('clone');
 clone({ a: 1 });
 ```
 
 如果使用 `webpack` 等环境
 
 ```js
-import { clone } from "clone";
+import { clone } from 'clone';
 clone({ a: 1 });
 ```
 

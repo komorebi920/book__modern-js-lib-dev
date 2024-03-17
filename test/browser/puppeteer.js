@@ -1,8 +1,8 @@
-const puppeteer = require("puppeteer");
+const puppeteer = require('puppeteer');
 
 (async () => {
   const testPath = `file://${__dirname}/index.html`;
-  const browser = await puppeteer.launch({ headless: "new" });
+  const browser = await puppeteer.launch({ headless: 'new' });
   const page = await browser.newPage();
   await page.goto(testPath);
 
@@ -10,13 +10,13 @@ const puppeteer = require("puppeteer");
   const pngPath = `${__dirname}/browser.png`;
   await page.screenshot({ path: pngPath, fullPage: true });
 
-  await page.waitForSelector(".suite");
+  await page.waitForSelector('.suite');
 
   // 通过
-  const passNode = await page.$$(".pass");
+  const passNode = await page.$$('.pass');
 
   // 失败
-  const failNode = await page.$$(".fail");
+  const failNode = await page.$$('.fail');
 
   if (passNode && passNode.length) {
     console.log(`通过 ${passNode.length} 项`);
